@@ -1,0 +1,44 @@
+/* --- Reset & Body --- */
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+  body { background: #f0f2f5; color: #333; transition: background 0.3s, color 0.3s; padding: 20px; }
+  body.dark { background: #121212; color: #f0f0f0; }
+
+/* --- Header --- */
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+header h1 { font-size: 2rem; }
+#themeToggle { cursor: pointer; padding: 5px 10px; font-size: 1.2rem; }
+
+/* --- Glass Cards --- */
+.glass { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border-radius: 10px; padding: 15px; margin-bottom: 20px; box-shadow: 0 4px 30px rgba(0,0,0,0.1); }
+body.dark .glass { background: rgba(255,255,255,0.05); }
+
+/* --- Balance Card --- */
+.balance-card h2 { font-size: 1.2rem; margin-bottom: 5px; }
+.balance-card h1 { font-size: 2rem; margin-bottom: 10px; }
+.income-expense { display: flex; justify-content: space-between; gap: 10px; }
+.income, .expense { flex: 1; text-align: center; }
+.income { color: #4caf50; }
+.expense { color: #f44336; }
+
+/* --- Controls --- */
+.controls { display: flex; gap: 10px; margin-bottom: 20px; }
+.controls input, .controls select { flex: 1; padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
+
+/* --- Form Section --- */
+.form-section input, .form-section select, .form-section button { display: block; width: 100%; margin-bottom: 10px; padding: 8px; border-radius: 5px; border: 1px solid #ccc; }
+.form-section button { background: #4caf50; color: #fff; border: none; cursor: pointer; }
+.form-section button:hover { background: #45a049; }
+
+/* --- Transaction List --- */
+.list-section ul { list-style: none; }
+.list-section li { display: flex; justify-content: space-between; align-items: center; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
+.plus { background: rgba(76,175,80,0.1); color: #4caf50; }
+.minus { background: rgba(244,67,54,0.1); color: #f44336; }
+.list-section .delete-btn { cursor: pointer; background: transparent; border: none; font-size: 1.2rem; }
+
+/* --- Dark Theme Overrides --- */
+body.dark input, body.dark select { background: #222; color: #f0f0f0; border: 1px solid #444; }
+body.dark .form-section button { background: #4caf50; }
+body.dark .list-section li.plus { background: rgba(76,175,80,0.2); }
+body.dark .list-section li.minus { background: rgba(244,67,54,0.2); }
